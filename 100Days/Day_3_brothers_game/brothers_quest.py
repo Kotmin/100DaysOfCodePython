@@ -37,3 +37,5 @@ if(ans.strip().lower().replace(' ','')=="whichpatchwouldyourbrotherchoose?"):
 else:
   print("Well it didn't went well")
   
+# Working url:
+# https://replit.com/@KotminPlay/BrotherQuestMiniGame?v=1&embed=1&output=1
