@@ -1,8 +1,5 @@
 # from random import randint # Would be better but online host have problem with random lib
 
-## Url
-# https://replit.com/@KotminPlay/rock-paper-scissors#main.py
-
 # import random module
 import random2
 
@@ -75,12 +72,12 @@ while game_is_pending:
   
   player_choice = input('What do you choose? Type r for Rock, p for Papper or s for Scissors. \n > ')
   
-  player_choice = player_choice.split().lower()
+  player_choice = player_choice.strip().lower()
   computer_choice = random2.choice(states)
   
-  if not(player_choice is in states):
+  if not(player_choice in states):
     print("That's not a valid choice. Try again")
-    sleep(10)
+    # sleep(10)
     continue
 
   print("Your choice: \n")
