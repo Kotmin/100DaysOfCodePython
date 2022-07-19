@@ -46,4 +46,11 @@ while not at_goal():
 #         move()
 
 
-##
+## Second and simpler way is just adding another while loop before our main loop
+
+# while front_is_clear:
+#     move()
+# turn_left()
+
+
+# (...)
