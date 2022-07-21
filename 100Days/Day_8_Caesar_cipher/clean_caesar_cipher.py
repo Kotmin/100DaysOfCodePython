@@ -1,22 +1,10 @@
+from replit import clear
+
+from art import logo
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-def encrypt(text,shift):
-  encrypted = ""
-  for i in text:
-    new_index = (alphabet.index(i) + shift ) % len(alphabet)
-    encrypted+=alphabet[new_index]
-  return encrypted
 
-def decrypt(text,shift):
-  decrypted = ""
-  for i in text:
-    new_index = (alphabet.index(i) - shift ) % len(alphabet)
-    decrypted+=alphabet[new_index]
-  return decrypted
-
-
-#Cleaner version
 def caesar(start_text,shift_amount,cipher_direction):
   result=""
   
@@ -27,16 +15,19 @@ def caesar(start_text,shift_amount,cipher_direction):
     shift_amount*=(-1)
     
   for i in start_text:
+    if i not in alphabet:
+      result+=i
+      continue
     new_index = (alphabet.index(i) + shift_amount ) % len(alphabet)
     result+=alphabet[new_index]
 
   return result
 
- # print(encrypt("hello",5))
-#print(encrypt("civilization",5))
-
 is_running = True
 
+clear()
+
+print(logo+'\n')
 
 
 while is_running:
@@ -45,16 +36,13 @@ while is_running:
   text = input("Type your message:\n").lower()
   shift = int(input("Type the shift number:\n"))
 
-  # if direction.lower().strip() =="encode":
-  #   message = encrypt(text,shift)
-  # if direction.lower().strip() =="decode":
-  #   message = decrypt(text,shift)
-
   message = caesar(text,shift,direction)
   
   print(f"There is your message: \n {message}")
   continuation = input("Type 'yes' if you want to go again. Otherwise type 'no'")
 
+  clear()
+  
   if continuation.lower().strip() =="no":
     is_running=False
     print("Vale")
