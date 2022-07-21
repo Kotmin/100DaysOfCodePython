@@ -30,7 +30,7 @@ while is_running:
   if direction.lower().strip() =="encode":
     message = encrypt(text,shift)
   if direction.lower().strip() =="decode":
-    message = encrypt(text,shift)
+    message = decrypt(text,shift)
 
   print(f"There is your message: \n {message}")
   continuation = input("Type 'yes' if you want to go again. Otherwise type 'no'")
