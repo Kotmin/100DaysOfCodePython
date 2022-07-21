@@ -1,4 +1,3 @@
-#repl.it file to remove in clear python version / to swap to something like "cls" or "clear"
 from replit import clear
 
 from art import logo
@@ -15,11 +14,11 @@ def caesar(start_text,shift_amount,cipher_direction):
   if cipher_direction=="decode":
     shift_amount*=(-1)
     
-  for i in start_text:
-    if i not in alphabet:
-      result+=i
+  for char in start_text:
+    if char not in alphabet:
+      result+=char
       continue
-    new_index = (alphabet.index(i) + shift_amount ) % len(alphabet)
+    new_index = (alphabet.index(char) + shift_amount ) % len(alphabet)
     result+=alphabet[new_index]
 
   return result
