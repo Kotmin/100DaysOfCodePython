@@ -1,3 +1,4 @@
+#repl.it file to remove in clear python version / to swap to something like "cls" or "clear"
 from replit import clear
 
 from art import logo
@@ -46,6 +47,3 @@ while is_running:
   if continuation.lower().strip() =="no":
     is_running=False
     print("Vale")
-
-
-
