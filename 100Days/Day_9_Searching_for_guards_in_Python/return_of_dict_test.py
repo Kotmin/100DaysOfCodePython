@@ -31,3 +31,15 @@ for key in student_scores:
 
 # 🚨 Don't change the code below 👇
 print(student_grades)
+
+
+# That doesn't work probably this trick will work only with static keys. I'm not sure about investing time into searching how to type it this way
+
+def f(x):
+    return {
+        'a': 1,
+        'b': 2,
+    }[x]
+
+
+# this is working and returnning clear number, what's cool
